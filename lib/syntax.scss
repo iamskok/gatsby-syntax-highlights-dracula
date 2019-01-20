@@ -1,0 +1,209 @@
+pre,
+code {
+	&[class*="language-"] {
+		color: $foreground;
+		background: $background;
+		text-shadow: none;
+		font-size: $font-size;
+		font-family: $fonts;
+		line-height: $line-height;
+		text-align: left;
+		white-space: pre;
+		word-spacing: normal;
+		word-break: normal;
+		word-wrap: normal;
+		tab-size: $tab-size;
+		hyphens: none;
+
+		::selection,
+		&::selection {
+			text-shadow: none;
+			background-color: $purple;
+		}
+	}
+}
+
+pre {
+	&[class*="language-"] {
+		overflow: auto;
+		background: $background;
+	}
+}
+
+:not(pre) {
+	> code[class*="language-"] {
+		padding: $padding;
+		background: $background;
+		white-space: normal;
+	}
+}
+
+.namespace {
+	opacity: $opacity;
+}
+
+.token {
+	color: $pink;
+
+	&.plain-text {
+		color: $foreground;
+	}
+
+	&.doctype,
+	&.cdata,
+	&.comment {
+		color: $comment;
+	}
+
+	&.boolean,
+	&.constant,
+	&.null,
+	&.number {
+		color: $purple;
+	}
+
+	&.prolog,
+	&.selector,
+	&.entity,
+	&.operator {
+		color: $cyan;
+	}
+
+	&.tag,
+	&.string,
+	&.url,
+	&.attr-value,
+	&.punctuation,
+	&.function {
+		color: $yellow;
+	}
+
+	&.regex,
+	&.variable,
+	&.placeholder
+	&.atrule,
+	&.attr-name,
+	&.statement {
+		color: $green;
+	}
+
+	&.keyword,
+	&.control
+	&.builtin,
+	&.important,
+	&.char,
+	&.tag,
+	&.deleted,
+	&.directive
+	&.namespace {
+		color: $pink;
+	}
+
+	&.unit,
+	&.symbol,
+	&.class-name,
+	&.property,
+	&.interpolation-punctuation {
+		color: $orange;
+	}
+
+	&.important {
+		font-weight: bold;
+	}
+
+	&.bold {
+		font-weight: bold;
+	}
+
+	&.italic,
+	&.plain-text {
+		font-style: italic;
+	}
+
+	&.entity {
+		cursor: help;
+	}
+}
+
+.language-css {
+	.token {
+		&.url,
+		&.function {
+			color: $green;
+		}
+	}
+}
+
+.language-c,
+.language-cpp {
+	.token {
+		&.string {
+			color: $cyan;
+		}
+	}
+}
+
+.language-java {
+	.token {
+		&.class-name {
+			color: $cyan;
+		}
+	}
+
+	span {
+		&.token {
+			&.class-name {
+				color: $cyan;
+			}
+		}
+	}
+}
+
+.language-markup {
+	.token {
+		&.attr-value {
+			color: $cyan;
+		}
+
+		&.tag {
+			$color: $green;
+		}
+	}
+}
+
+.language-objectivec {
+	.token {
+		&.property {
+			color: $cyan;
+		}
+
+		&.string {
+			color: $green;
+		}
+	}
+}
+
+.language-php {
+	.token {
+		&.boolean,
+		&.keyword {
+			color: $cyan;
+		}
+
+		&.function {
+			color: $pink;
+		}
+	}
+}
+
+.language-ruby {
+	.token {
+		&.symbol {
+			color: $cyan;
+		}
+
+		&.class-name {
+			color: $orange;
+		}
+	}
+}
